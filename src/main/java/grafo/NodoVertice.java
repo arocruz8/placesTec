@@ -3,9 +3,9 @@ package grafo;
 import java.util.*;
 
 public class NodoVertice{
-    public int vertice;                    //Almacena el dato del vértice
+    public int vertice;                 //Almacena el dato del vértice
     public boolean visitado;            //Indica si el vértice ha sido visitado o no
-    public LinkedList <Nodo> aristas;    //Almacena la lista de aristas del vértice
+    public LinkedList <Nodo> aristas;   //Almacena la lista de aristas del vértice
 
     public NodoVertice(){
         this.vertice = 0;
