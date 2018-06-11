@@ -16,7 +16,7 @@ import com.google.maps.model.LatLng;
  *     documentation</a>
  */
 public class GeocodingApi {
-  private GeocodingApi() {}
+    private GeocodingApi() {}
 
   /**
    * Creates a new Geocoding API request.
@@ -24,9 +24,9 @@ public class GeocodingApi {
    * @param context The {@link GeoApiContext} to make requests through.
    * @return Returns the request, ready to run.
    */
-  public static GeocodingApiRequest newRequest(GeoApiContext context) {
-    return new GeocodingApiRequest(context);
-  }
+    public static GeocodingApiRequest newRequest(GeoApiContext context) {
+        return new GeocodingApiRequest(context);
+    }
 
   /**
    * Requests the latitude and longitude of an {@code address}.
@@ -35,11 +35,11 @@ public class GeocodingApi {
    * @param address The address to geocode.
    * @return Returns the request, ready to run.
    */
-  public static GeocodingApiRequest geocode(GeoApiContext context, String address) {
-    GeocodingApiRequest request = new GeocodingApiRequest(context);
-    request.address(address);
-    return request;
-  }
+    public static GeocodingApiRequest geocode(GeoApiContext context, String address) {
+        GeocodingApiRequest request = new GeocodingApiRequest(context);
+        request.address(address);
+        return request;
+    }
 
   /**
    * Requests the street address of a {@code location}.
@@ -48,33 +48,33 @@ public class GeocodingApi {
    * @param location The location to reverse geocode.
    * @return Returns the request, ready to run.
    */
-  public static GeocodingApiRequest reverseGeocode(GeoApiContext context, LatLng location) {
-    GeocodingApiRequest request = new GeocodingApiRequest(context);
-    request.latlng(location);
-    return request;
-  }
-
-  static class Response implements ApiResponse<GeocodingResult[]> {
-    public String status;
-    public String errorMessage;
-    public GeocodingResult[] results;
-
-    @Override
-    public boolean successful() {
-      return "OK".equals(status) || "ZERO_RESULTS".equals(status);
+    public static GeocodingApiRequest reverseGeocode(GeoApiContext context, LatLng location) {
+        GeocodingApiRequest request = new GeocodingApiRequest(context);
+        request.latlng(location);
+        return request;
     }
 
-    @Override
-    public GeocodingResult[] getResult() {
-      return results;
-    }
+    static class Response implements ApiResponse<GeocodingResult[]> {
+        public String status;
+        public String errorMessage;
+        public GeocodingResult[] results;
 
-    @Override
-    public ApiException getError() {
-      if (successful()) {
-        return null;
-      }
-      return ApiException.from(status, errorMessage);
+        @Override
+        public boolean successful() {
+          return "OK".equals(status) || "ZERO_RESULTS".equals(status);
+        }
+
+        @Override
+        public GeocodingResult[] getResult() {
+          return results;
+        }
+
+        @Override
+        public ApiException getError() {
+          if (successful()) {
+            return null;
+          }
+          return ApiException.from(status, errorMessage);
+        }
     }
-  }
 }
