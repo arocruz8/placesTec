@@ -1,4 +1,4 @@
-package prueba;
+package google;
 import com.google.maps.GeoApiContext;
 import com.google.maps.GeocodingApiRequest;
 import com.google.maps.errors.ApiException;
