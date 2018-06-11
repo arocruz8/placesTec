@@ -19,7 +19,7 @@ import com.google.maps.model.LatLng;
  */
 public class PlacesApi {
 
-  private PlacesApi() {}
+     private PlacesApi() {}
 
   /**
    * Performs a search for nearby Places.
@@ -28,11 +28,11 @@ public class PlacesApi {
    * @param location The latitude/longitude around which to retrieve place information.
    * @return Returns a NearbySearchRequest that can be configured and executed.
    */
-  public static NearbySearchRequest nearbySearchQuery(GeoApiContext context, LatLng location) {
-    NearbySearchRequest request = new NearbySearchRequest(context);
-    request.location(location);
-    return request;
-  }
+    public static NearbySearchRequest nearbySearchQuery(GeoApiContext context, LatLng location) {
+        NearbySearchRequest request = new NearbySearchRequest(context);
+        request.location(location);
+        return request;
+    }
 
   /**
    * Retrieves the next page of Nearby Search results. The nextPageToken, returned in a
@@ -43,12 +43,12 @@ public class PlacesApi {
    * @param nextPageToken The nextPageToken returned as part of a PlacesSearchResponse.
    * @return Returns a NearbySearchRequest that can be executed.
    */
-  public static NearbySearchRequest nearbySearchNextPage(
-      GeoApiContext context, String nextPageToken) {
-    NearbySearchRequest request = new NearbySearchRequest(context);
-    request.pageToken(nextPageToken);
-    return request;
-  }
+    public static NearbySearchRequest nearbySearchNextPage(
+        GeoApiContext context, String nextPageToken) {
+        NearbySearchRequest request = new NearbySearchRequest(context);
+        request.pageToken(nextPageToken);
+        return request;
+    }
 
   /**
    * Performs a search for Places using a text query; for example, "pizza in New York" or "shoe
@@ -92,13 +92,13 @@ public class PlacesApi {
    * @param radius The distance in meters within which to return place results.
    * @return Returns a RadarSearchRequest that can be configured and executed.
    */
-  public static RadarSearchRequest radarSearchQuery(
-    GeoApiContext context, LatLng location, int radius) {
-    RadarSearchRequest request = new RadarSearchRequest(context);
-    request.location(location);
-    request.radius(radius);
-    return request;
-  }
+//  public static RadarSearchRequest radarSearchQuery(
+//    GeoApiContext context, LatLng location, int radius) {
+//    RadarSearchRequest request = new RadarSearchRequest(context);
+//    request.location(location);
+//    request.radius(radius);
+//    return request;
+//  }
 
   /**
    * Requests the details of a Place.
@@ -112,11 +112,11 @@ public class PlacesApi {
    * @param placeId The PlaceID to request details on.
    * @return Returns a PlaceDetailsRequest that you can configure and execute.
    */
-  public static PlaceDetailsRequest placeDetails(GeoApiContext context, String placeId) {
-    PlaceDetailsRequest request = new PlaceDetailsRequest(context);
-    request.placeId(placeId);
-    return request;
-  }
+    public static PlaceDetailsRequest placeDetails(GeoApiContext context, String placeId) {
+        PlaceDetailsRequest request = new PlaceDetailsRequest(context);
+        request.placeId(placeId);
+        return request;
+    }
 
   /**
    * Requests a Photo from a PhotoReference.
@@ -132,12 +132,12 @@ public class PlacesApi {
    * @param photoReference The reference to the photo to retrieve.
    * @return Returns a PhotoRequest that you can execute.
    */
-  public static PhotoRequest photo(GeoApiContext context, String photoReference) {
-    PhotoRequest request = new PhotoRequest(context);
-    request.photoReference(photoReference);
-    return request;
-  }
-
+    public static PhotoRequest photo(GeoApiContext context, String photoReference) {
+        PhotoRequest request = new PhotoRequest(context);
+        request.photoReference(photoReference);
+        return request;
+    }
+}
   /**
    * Creates a new Places Autocomplete request for a given input. The Place Autocomplete service can
    * match on full words as well as substrings. Applications can therefore send queries as the user
@@ -147,11 +147,11 @@ public class PlacesApi {
    * @param input input is the text string on which to search.
    * @return Returns a PlaceAutocompleteRequest that you can configure and execute.
    */
-  public static PlaceAutocompleteRequest placeAutocomplete(GeoApiContext context, String input) {
-    PlaceAutocompleteRequest request = new PlaceAutocompleteRequest(context);
-    request.input(input);
-    return request;
-  }
+//  public static PlaceAutocompleteRequest placeAutocomplete(GeoApiContext context, String input) {
+//    PlaceAutocompleteRequest request = new PlaceAutocompleteRequest(context);
+//    request.input(input);
+//    return request;
+//  }
 
   /**
    * Allows you to add on-the-fly geographic query predictions to your application.
@@ -160,9 +160,9 @@ public class PlacesApi {
    * @param input input is the text string on which to search.
    * @return Returns a QueryAutocompleteRequest that you can configure and execute.
    */
-  public static QueryAutocompleteRequest queryAutocomplete(GeoApiContext context, String input) {
-    QueryAutocompleteRequest request = new QueryAutocompleteRequest(context);
-    request.input(input);
-    return request;
-  }
-}
+//  public static QueryAutocompleteRequest queryAutocomplete(GeoApiContext context, String input) {
+//    QueryAutocompleteRequest request = new QueryAutocompleteRequest(context);
+//    request.input(input);
+//    return request;
+//  }
+//}
