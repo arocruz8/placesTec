@@ -16,7 +16,7 @@ import com.google.maps.model.LatLng;
  *     documentation</a>
  */
 public class GeocodingApi {
-    private GeocodingApi() {}
+    public GeocodingApi() {}
 
   /**
    * Creates a new Geocoding API request.
