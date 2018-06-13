@@ -27,7 +27,7 @@ import java.util.concurrent.TimeUnit;
  */
 public class GeoApiContext {
 
-  private static final String VERSION = "@VERSION@"; // Populated by the build script
+  private static final String VERSION = "0.2.7"; // Populated by the build script
   private static final String USER_AGENT = "GoogleGeoApiClientJava/" + VERSION;
   private static final int DEFAULT_BACKOFF_TIMEOUT_MILLIS = 60 * 1000; // 60s
 
