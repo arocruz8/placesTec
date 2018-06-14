@@ -1,6 +1,5 @@
 package google;
 import com.google.maps.GeoApiContext;
-import com.google.maps.PhotoRequest;
 import com.google.maps.PlaceAutocompleteRequest;
 import com.google.maps.PlaceDetailsRequest;
 import com.google.maps.QueryAutocompleteRequest;
@@ -93,13 +92,13 @@ public class PlacesApi {
    * @param radius The distance in meters within which to return place results.
    * @return Returns a RadarSearchRequest that can be configured and executed.
    */
-//  public static RadarSearchRequest radarSearchQuery(
-//    GeoApiContext context, LatLng location, int radius) {
-//    RadarSearchRequest request = new RadarSearchRequest(context);
-//    request.location(location);
-//    request.radius(radius);
-//    return request;
-//  }
+  public static RadarSearchRequest radarSearchQuery(
+    GeoApiContext context, LatLng location, int radius) {
+    RadarSearchRequest request = new RadarSearchRequest(context);
+    request.location(location);
+    request.radius(radius);
+    return request;
+  }
 
   /**
    * Requests the details of a Place.
@@ -119,26 +118,7 @@ public class PlacesApi {
         return request;
     }
 
-  /**
-   * Requests a Photo from a PhotoReference.
-   *
-   * <p>Note: If you want to use a Photo in a web browser, please retrieve the photos for a place
-   * via our <a
-   * href="https://developers.google.com/maps/documentation/javascript/places#places_photos">
-   * JavaScript Places Library</a>. Likewise, on Android, Places Photos can be retrieved using the
-   * <a href="https://developers.google.com/places/android-api/photos">Google Places API for
-   * Android</a>.
-   *
-   * @param context The context on which to make Geo API requests.
-   * @param photoReference The reference to the photo to retrieve.
-   * @return Returns a PhotoRequest that you can execute.
-   */
-    public static PhotoRequest photo(GeoApiContext context, String photoReference) {
-        PhotoRequest request = new PhotoRequest(context);
-        request.photoReference(photoReference);
-        return request;
-    }
-}
+
   /**
    * Creates a new Places Autocomplete request for a given input. The Place Autocomplete service can
    * match on full words as well as substrings. Applications can therefore send queries as the user
@@ -148,11 +128,11 @@ public class PlacesApi {
    * @param input input is the text string on which to search.
    * @return Returns a PlaceAutocompleteRequest that you can configure and execute.
    */
-//  public static PlaceAutocompleteRequest placeAutocomplete(GeoApiContext context, String input) {
-//    PlaceAutocompleteRequest request = new PlaceAutocompleteRequest(context);
-//    request.input(input);
-//    return request;
-//  }
+  public static PlaceAutocompleteRequest placeAutocomplete(GeoApiContext context, String input) {
+    PlaceAutocompleteRequest request = new PlaceAutocompleteRequest(context);
+    request.input(input);
+    return request;
+  }
 //
 //  /**
 //   * Allows you to add on-the-fly geographic query predictions to your application.
@@ -161,9 +141,9 @@ public class PlacesApi {
 //   * @param input input is the text string on which to search.
 //   * @return Returns a QueryAutocompleteRequest that you can configure and execute.
 //   */
-//  public static QueryAutocompleteRequest queryAutocomplete(GeoApiContext context, String input) {
-//    QueryAutocompleteRequest request = new QueryAutocompleteRequest(context);
-//    request.input(input);
-//    return request;
-//  }
-//}
+  public static QueryAutocompleteRequest queryAutocomplete(GeoApiContext context, String input) {
+    QueryAutocompleteRequest request = new QueryAutocompleteRequest(context);
+    request.input(input);
+    return request;
+  }
+}
