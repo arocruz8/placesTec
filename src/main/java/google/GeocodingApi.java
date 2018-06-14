@@ -6,16 +6,11 @@ import com.google.maps.internal.ApiResponse;
 import com.google.maps.model.GeocodingResult;
 import com.google.maps.model.LatLng;
 
-/**
- * Geocoding is the process of converting addresses (like "1600 Amphitheatre Parkway, Mountain View,
- * CA") into geographic coordinates (like latitude 37.423021 and longitude -122.083739), which you
- * can use to place markers or position the map. Reverse geocoding is the process of converting
- * geographic coordinates into a human-readable address.
- *
- * @see <a href="https://developers.google.com/maps/documentation/geocoding/">Geocoding
- *     documentation</a>
- */
 public class GeocodingApi {
+
+    static Object geocode(google.GeoApiContext context, String _Amphitheatre_Parkway_Mountain_View_CA_94) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     public GeocodingApi() {}
 
   /**
