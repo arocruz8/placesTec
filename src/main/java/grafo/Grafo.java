@@ -186,4 +186,26 @@ public class Grafo{
         }
         System.out.println();
         }
+    
+    public int calcularCaminoCorto(int inicial){
+        NodoVertice actual = buscarVertice(inicial);
+        int distanciaCorta =0 ;
+        LinkedList <NodoVertice> aristas = new LinkedList();
+        
+        while(actual != null){
+            if(!actual.visitado){
+                System.out.print(actual.vertice + " "); //Imprime el vértice
+                actual.visitado = true; //Indica que el vértice fue visitado
+                aristas.add(actual);
+            }
+            for (int a=0; a<aristas.size(); a++){
+                
+            }
+        
+        }
+        return distanciaCorta;
+    }
+    
+    
+    
 }//Fin de la clase
