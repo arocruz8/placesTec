@@ -20,11 +20,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
-/**
- * The entry point for making requests against the Google Geo APIs.
- *
- * <p>Construct this object by using the enclosed {@link GeoApiContext.Builder}.
- */
 public class GeoApiContext {
 
   private static final String VERSION = "0.2.7"; // Populated by the build script
