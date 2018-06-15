@@ -38,15 +38,15 @@ public class GeoApiContext {
 
   /* package */
   GeoApiContext(
-      RequestHandler requestHandler,
-      String apiKey,
-      String baseUrlOverride,
-      String channel,
-      String clientId,
-      long errorTimeout,
-      ExceptionsAllowedToRetry exceptionsAllowedToRetry,
-      Integer maxRetries,
-      UrlSigner urlSigner) {
+    RequestHandler requestHandler,
+    String apiKey,
+    String baseUrlOverride,
+    String channel,
+    String clientId,
+    long errorTimeout,
+    ExceptionsAllowedToRetry exceptionsAllowedToRetry,
+    Integer maxRetries,
+    UrlSigner urlSigner) {
     this.requestHandler = requestHandler;
     this.apiKey = apiKey;
     this.baseUrlOverride = baseUrlOverride;
@@ -94,19 +94,19 @@ public class GeoApiContext {
     /** Builder pattern for {@code GeoApiContext.RequestHandler}. */
     interface Builder {
 
-      void connectTimeout(long timeout, TimeUnit unit);
+        void connectTimeout(long timeout, TimeUnit unit);
 
-      void readTimeout(long timeout, TimeUnit unit);
+        void readTimeout(long timeout, TimeUnit unit);
 
-      void writeTimeout(long timeout, TimeUnit unit);
+        void writeTimeout(long timeout, TimeUnit unit);
 
-      void queriesPerSecond(int maxQps);
+        void queriesPerSecond(int maxQps);
 
-      void proxy(Proxy proxy);
+        void proxy(Proxy proxy);
 
-      void proxyAuthentication(String proxyUserName, String proxyUserPassword);
+        void proxyAuthentication(String proxyUserName, String proxyUserPassword);
 
-      RequestHandler build();
+        RequestHandler build();
     }
   }
 
@@ -218,13 +218,13 @@ public class GeoApiContext {
         exceptionsAllowedToRetry);
   }
 
-  private <T, R extends ApiResponse<T>> PendingResult<T> getWithPath(
-      Class<R> clazz,
-      FieldNamingPolicy fieldNamingPolicy,
-      String hostName,
-      String path,
-      boolean canUseClientId,
-      String encodedPath) {
+private <T, R extends ApiResponse<T>> PendingResult<T> getWithPath(
+    Class<R> clazz,
+    FieldNamingPolicy fieldNamingPolicy,
+    String hostName,
+    String path,
+    boolean canUseClientId,
+    String encodedPath) {
     checkContext(canUseClientId);
     if (!encodedPath.startsWith("&")) {
       throw new IllegalArgumentException("encodedPath must start with &");
