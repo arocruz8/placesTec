@@ -19,7 +19,7 @@ import google.NearbySearchRequest;
  */
 public class PlacesApi {
 
-     private PlacesApi() {}
+     public PlacesApi() {}
 
   /**
    * Performs a search for nearby Places.
@@ -92,13 +92,13 @@ public class PlacesApi {
    * @param radius The distance in meters within which to return place results.
    * @return Returns a RadarSearchRequest that can be configured and executed.
    */
-  public static RadarSearchRequest radarSearchQuery(
-    GeoApiContext context, LatLng location, int radius) {
-    RadarSearchRequest request = new RadarSearchRequest(context);
-    request.location(location);
-    request.radius(radius);
-    return request;
-  }
+//  public static RadarSearchRequest radarSearchQuery(
+//    GeoApiContext context, LatLng location, int radius) {
+//    RadarSearchRequest request = new RadarSearchRequest(context);
+//    request.location(location);
+//    request.radius(radius);
+//    return request;
+//  }
 
   /**
    * Requests the details of a Place.
@@ -128,22 +128,22 @@ public class PlacesApi {
    * @param input input is the text string on which to search.
    * @return Returns a PlaceAutocompleteRequest that you can configure and execute.
    */
-  public static PlaceAutocompleteRequest placeAutocomplete(GeoApiContext context, String input) {
-    PlaceAutocompleteRequest request = new PlaceAutocompleteRequest(context);
-    request.input(input);
-    return request;
-  }
-//
-//  /**
-//   * Allows you to add on-the-fly geographic query predictions to your application.
-//   *
-//   * @param context The context on which to make Geo API requests.
-//   * @param input input is the text string on which to search.
-//   * @return Returns a QueryAutocompleteRequest that you can configure and execute.
-//   */
-  public static QueryAutocompleteRequest queryAutocomplete(GeoApiContext context, String input) {
-    QueryAutocompleteRequest request = new QueryAutocompleteRequest(context);
-    request.input(input);
-    return request;
-  }
+//  public static PlaceAutocompleteRequest placeAutocomplete(GeoApiContext context, String input) {
+//    PlaceAutocompleteRequest request = new PlaceAutocompleteRequest(context);
+//    request.input(input);
+//    return request;
+//  }
+////
+////  /**
+////   * Allows you to add on-the-fly geographic query predictions to your application.
+////   *
+////   * @param context The context on which to make Geo API requests.
+////   * @param input input is the text string on which to search.
+////   * @return Returns a QueryAutocompleteRequest that you can configure and execute.
+////   */
+//  public static QueryAutocompleteRequest queryAutocomplete(GeoApiContext context, String input) {
+//    QueryAutocompleteRequest request = new QueryAutocompleteRequest(context);
+//    request.input(input);
+//    return request;
+//  }
 }
