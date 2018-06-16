@@ -3,7 +3,7 @@ import java.util.*;
 
 public class Grafo{
     public LinkedList <NodoVertice> vertices;  //Lista de vértices del grafo
-    // crear ek objeto de la información del dato que recupera
+    // crear el objeto de la información del dato que recupera
     
 
     //Constructor del grafo
