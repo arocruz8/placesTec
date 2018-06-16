@@ -19,6 +19,10 @@ import google.NearbySearchRequest;
  */
 public class PlacesApi {
 
+    static Object textSearchQuery(google.GeoApiContext context, String query) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
      public PlacesApi() {}
 
   /**
