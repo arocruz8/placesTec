@@ -22,12 +22,12 @@ public class ejemplo{
    
     GeoApiContext context = new GeoApiContext.Builder().apiKey(ApiKey).build();
     
-    PlacesApi[] results = PlacesApi.textSearchQuery(context, query).await();
+    //PlacesApi results = PlacesApi.textSearchQuery(context, query).await();
+    //Gson gson = new GsonBuilder().setPrettyPrinting().create();
+    
+    GeocodingResult[] results =  GeocodingApi.geocode(context, direccion).await();
     Gson gson = new GsonBuilder().setPrettyPrinting().create();
-    
-    
     System.out.println(gson.toJson(results[0].addressComponents));
-
     
     
 }
