@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Geolocalización</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            #map{
+                margin: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <div>Geolocalización</div>
+        <button onclick="findMe()">Mostrar ubicación</button>
+        <div id="map"></div>
+        
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB88REh9fMvRsTARfNYm5ndpf7vEduamI4"></script>
+        
+        <script>
+            function findMe(){
+                var output = document.getElementById('map');
+                
+                if(navigator.geolocation){
+                    output.innerHTML = "<p> Tu navegador soporta la geolocalizacion</p>";
+                }else{
+                    output.innerHTML = "<p> Tu navegador no soporta la geolocalizacio</p>";
+                }
+                
+                function localizacion(posicion){
+                    var latitude = posicion.coords.latitude;
+                    var longitude = posicion.coords.longitude;
+                    
+                    var imgURL =  "https://maps.googleapis.com/maps/api/staticmap?center="+latitude+","+longitude+"&size=600x300&markers=color:red%7C"+latitude+","+longitude+"&key="AIzaSyB88REh9fMvRsTARfNYm5ndpf7vEduamI4";
+                    
+                    output.innerHTML = "<img src='"+imgURL+"'>";
+                    
+                
+                }    
+                
+                function error(){
+                    output.innerHTML = "<p>No se pudo obtener su ubicación</p>";
+                }
+                
+                navigator.geolocation.getCurrentPosition(localizacion,error);
+            }
+        </script>
+    </body>
+</html>
