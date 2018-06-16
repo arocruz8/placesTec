@@ -8,9 +8,6 @@ import com.google.maps.model.LatLng;
 
 public class GeocodingApi {
 
-    static Object geocode(google.GeoApiContext context, String _Amphitheatre_Parkway_Mountain_View_CA_94) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
     public GeocodingApi() {}
 
   /**
